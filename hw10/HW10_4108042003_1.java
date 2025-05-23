@@ -1,0 +1,29 @@
+package hw10;
+
+public class HW10_4108042003_1 extends Buy_Phone{
+	
+	public int[][] bestPhone(final int[][] inputArr) {
+	    int len = inputArr.length;
+	    int newLen = len;
+	    for (int i = 0; i < len; i++) {
+	        if (inputArr[i] != null) {
+	            for (int j = 0; j < len; j++) {
+	            	if(i != j) {
+		                if (inputArr[j] != null && inputArr[i][0] >= inputArr[j][0] && inputArr[i][1] >= inputArr[j][1]) {
+		                    inputArr[j] = null;
+		                    newLen--;
+		                }
+	            	}
+	            }
+	        }
+	    }
+	    int[][] ans = new int[newLen][2];
+	    int index = 0;
+	    for (int i = 0; i < len; i++) {
+	        if (inputArr[i] != null) {
+	            ans[index++] = inputArr[i];
+	        }
+	    }
+	    return ans;
+	}
+}

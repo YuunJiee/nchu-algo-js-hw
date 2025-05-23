@@ -1,0 +1,10 @@
+**/*.ppt
+**/*.pptx
+**/*.pdf
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+
+
